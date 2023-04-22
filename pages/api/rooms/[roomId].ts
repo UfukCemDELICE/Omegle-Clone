@@ -1,6 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from "next";
-import dbConnect from "@/libs/dbConntect.js";
+import dbConnect from "@/libs/dbConnect.js";
 import { RtcTokenBuilder, RtcRole } from "agora-access-token";
 import { RtmTokenBuilder, RtmRole } from "agora-access-token";
 import Room from "@/models/Rooms.js";
