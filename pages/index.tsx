@@ -1,6 +1,9 @@
 import Head from "next/head";
 import React, { useEffect, useRef, useState } from "react";
 import styles from "../styles/Home.module.css";
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+
 import { RtmChannel } from "agora-rtm-sdk";
 import {
   ICameraVideoTrack,
@@ -253,7 +256,7 @@ export default function Home() {
         {isChatting ? (
           <>
             {room._id}
-            <button onClick={handleNextClick}>next</button>
+            <Button onClick={handleNextClick} variant="contained" color="success">Next</Button>
             <div className="chat-window">
               <div className="video-panel">
                 <div className="video-stream">
@@ -295,7 +298,7 @@ export default function Home() {
           </>
         ) : (
           <>
-            <button onClick={handleStartChattingClicked}>Start Chatting</button>
+            <Button onClick={handleStartChattingClicked} variant="contained">Start Chatting</Button>
           </>
         )}
       </main>
